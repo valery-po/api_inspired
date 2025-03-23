@@ -1,0 +1,28 @@
+@use 'var' as c;
+
+.customer {
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 4px;
+    border-bottom: 0.5px solid #dcdcdc;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-title {
+    font-size: 14px;
+    line-height: 17px;
+    color: c.$gray;
+  }
+
+  &__item-data {
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: auto;
+  }
+}

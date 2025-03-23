@@ -1,0 +1,65 @@
+@use 'var' as c;
+
+.pagination {
+    margin: 0 auto;
+    display: flex;
+    width: max-content;
+    gap: 16px;
+    padding-top: 40px;
+
+    &__list {
+      display: flex;
+      gap: 8px;
+      padding-top: 3px;
+      padding-bottom: 6px;
+
+      @include c.tablet {
+        gap: 10px;
+     }
+    }
+
+    &__link {
+     position: relative;
+     width: 16px;
+     font-size: 14px;
+     line-height: 17px;
+     color: c.$gray;
+
+
+     @include c.tablet {
+        width: 10px;
+        font-size: 10px;
+        line-height: 12px;
+     }
+
+     &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 1px;
+        left: 0;
+        right: 0;
+        bottom: -6px;
+        background-color: transparent;
+
+    }
+
+     &_active {
+        color: c.$main-color;
+
+        &:after {
+            background-color: c.$main-color;
+        }
+     }
+
+    }
+
+    &__arrow {
+     color: c.$main-color;
+
+     &_disabled {
+        color: c.$gray;
+        pointer-events: none;
+     }
+    }
+}

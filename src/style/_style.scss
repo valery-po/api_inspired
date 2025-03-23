@@ -1,0 +1,150 @@
+@use 'var' as c;
+
+:root {
+    position: relative;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    position: relative;
+    overflow-x: hidden;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    color: c.$main-color;
+    background-color: c.$second-color;
+    font-weight: 400;
+  }
+  
+  
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  svg {
+    max-height: 100%;
+  }
+  
+  
+  button {
+    display: block;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  p,
+  figure {
+    margin: 0;
+  }
+  
+  
+  fieldset {
+    padding: 0;
+    margin: 0;
+    border:  none;
+  }
+  
+  iframe {
+    border: none;
+  }
+  
+  /*
+  Доступно скрываю элементы
+  */
+  
+  .visually-hidden {
+    position: fixed;
+    transform: scale(0);
+  }
+
+  .input-hide {
+    appearance: none;
+  }
+  
+  
+  /*
+  Пример контейнера
+  
+  Если контейнер 1180px по макету,
+  то для max-width прибавляем паддинги 30px*2, 
+  в итоге 1240px
+  Чтобы контент не прижимался к краям экрана
+  */
+
+  
+  
+  .container {
+    --max-width: 1180px;
+    --padding: 30px;
+    max-width: calc(var(--max-width) + var(--padding) * 2);
+    padding: 0 var(--padding);
+    margin: 0 auto;
+
+
+    @include c.laptop {
+      --max-width: 880px;
+    }
+
+    @include c.tablet {
+      --max-width: 620px;
+    }
+
+
+    @include c.mobile {
+      --padding: 15px;
+    }
+
+     
+
+   
+  }
+
+
+  main {
+    margin-bottom: 120px;
+
+   
+
+    @include c.tablet {
+      margin-bottom: 80px;
+    }
+
+
+    @include c.mobile {
+      margin-bottom: 60px;
+    }
+  }
+  

@@ -1,0 +1,26 @@
+@use 'var' as c;
+
+.count {
+    width: 107px;
+    height: 46px;
+    border: 0.5px solid c.$main-color;
+    display: flex;
+    justify-content: space-between;
+
+    @include c.tablet {
+        height: 36px;
+    }
+
+    &__item {
+        flex-basis: 33%;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+    }
+
+    &__number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

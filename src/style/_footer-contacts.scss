@@ -1,0 +1,22 @@
+@use 'var' as c;
+
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 18px;
+  line-height: 22px;
+
+  @include c.tablet {
+    gap: 21px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  
+  @include c.tablet {
+    gap: 8px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

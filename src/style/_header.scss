@@ -1,0 +1,71 @@
+@use 'var' as c;
+
+.header {
+    padding: 24px 0 36px;
+
+    @include c.tablet {
+        padding: 16px 0;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+
+        @include c.mobile {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+    &__phone {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 17px;
+        text-transform: uppercase;
+
+        @include c.tablet {
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        @include c.mobile {
+            display: none;
+        }
+
+    }
+
+    &__logo {
+     justify-self: center;
+      @include c.tablet {
+        max-width: 154px;
+      }
+
+      @include c.mobile {
+        max-width: 124px;
+        justify-self: start;
+      }
+    }
+
+    &__navigation {
+        justify-self: end;
+        
+    }
+
+    &__nav-list {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        @include c.mobile {
+            gap: 16px;
+        }
+    }
+
+
+    &__link {
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: c.$gray;
+        }
+    }
+}

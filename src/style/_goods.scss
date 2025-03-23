@@ -1,0 +1,57 @@
+@use 'var' as c;
+
+
+.goods {
+
+    &__warning {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 40px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 24px;
+        border-bottom: 1px solid c.$light-grey;
+
+        @include c.tablet {
+            font-size: 24px;
+            line-height: 29px;
+            padding-bottom: 16px;
+        }
+
+        @include c.mobile {
+            font-size: 18px;
+            line-height: 22px;
+            padding-bottom: 9px;
+        }
+    }
+
+
+    &__list {
+        padding-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 280px);
+        gap: 40px 20px;
+        justify-content: space-evenly;
+
+        @include c.tablet {
+            padding-top: 24px;
+            row-gap: 24px;
+            grid-template-columns: repeat(auto-fill, 140px);
+        }
+
+        @include c.mobile {
+            gap: 16px 10px;
+            padding-top: 16px;
+        }
+        
+        
+    }
+    
+}

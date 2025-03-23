@@ -1,0 +1,259 @@
+@use 'var' as c;
+
+.card {
+    
+    // margin-bottom: 100px;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+
+        @include c.tablet {
+            flex-wrap: wrap;
+        }
+
+        @include c.mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        width: 471px;
+        height: 622px;
+        object-fit: cover;
+
+        @include c.laptop {
+            width: 362px;
+            height: 478px;
+        }
+
+        @include c.tablet {
+            width: 250px;
+            height: 330px;
+        }
+
+        @include c.mobile {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        max-width: 335px;
+
+        @include c.tablet {
+            max-width: 300px;
+        }
+
+        @include c.mobile {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+
+
+        @include c.tablet {
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 12px;
+        }
+
+
+
+        @include c.mobile {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__price {
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+
+        @include c.tablet {
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 16px;
+        }
+
+        @include c.mobile {
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 16px;
+        }
+
+
+
+
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: c.$gray;
+
+        @include c.tablet {
+            font-size: 10px;
+            line-height: 12px;
+
+        }
+
+    }
+
+    &__vendor-code {
+        font-size: 12px;
+        line-height: 15px;
+        color: c.$main-color;
+        margin-bottom: 24px;
+
+        @include c.tablet {
+            font-size: 10px;
+            line-height: 12px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__color {
+        margin-bottom: 24px;
+
+        @include c.tablet {
+            margin-bottom: 16px;
+        }
+
+        @include c.mobile {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__color-title {
+        margin-bottom: 8px;
+
+        @include c.tablet {
+            margin-bottom: 10px;
+        }
+
+        @include c.mobile {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__color-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    &__color-item {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+
+        &:after {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__size {
+        margin-bottom: 24px;
+
+        @include c.tablet {
+            margin-bottom: 16px;
+        }
+
+        @include c.mobile {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__size-title {
+        margin-bottom: 8px;
+    }
+
+    &__size-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+    }
+
+    &__size-item {
+
+        cursor: pointer;
+
+        &_active {
+            background-color: c.$main-color;
+            color: c.$second-color;
+        }
+    }
+
+    &__description {
+        margin-bottom: 40px;
+
+        @include c.tablet {
+            margin-bottom: 24px;
+        }
+
+        @include c.mobile {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__description-title {
+        margin-bottom: 8px;
+    }
+
+    &__description-text {
+        font-size: 16px;
+        line-height: 140%;
+
+        @include c.tablet {
+            font-size: 12px;
+        }
+
+
+    }
+
+    &__control {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    &__count {
+        margin-right: 24px;
+
+        @include c.tablet {
+            margin-right: 20px;
+        }
+
+        @include c.mobile {
+            margin-right: 10px;
+        }
+    }
+
+    &__add-cart {
+        margin-right: 16px;
+
+        @include c.tablet {
+
+            margin-right: 8px;
+
+
+        }
+    }
+
+}

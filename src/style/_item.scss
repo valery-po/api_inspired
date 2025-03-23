@@ -1,0 +1,168 @@
+@use 'var' as c;
+
+.item {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 24px 20px;
+    grid-template-areas:
+        'image content content del'
+        'image prop count count';
+
+    @include c.mobile {
+        gap: 10px;
+        grid-template-areas:
+            'image content content del'
+            'prop prop count count';
+    }
+
+    &__image {
+        grid-area: image;
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+
+        @include c.mobile {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    &__content {
+        grid-area: content;
+    }
+
+    &__prop {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        grid-area: prop;
+    }
+
+    &__del {
+        grid-area: del;
+        width: 24px;
+        height: 24px;
+        background-image: url('../img/del.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        justify-self: end;
+        align-self: start;
+
+    }
+
+    &__count {
+        grid-area: count;
+        justify-self: end;
+        align-self: end;
+    }
+
+    &__color {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+           
+        @include c.mobile {
+          gap: 4px;
+            
+        }
+    }
+
+   
+
+    &__size {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+
+
+    &__color-item {
+        width: 24px;
+        height: 24px;
+
+        &:after {
+            width: 16px;
+            height: 16px;
+        }
+
+    }
+
+    &__size-title {
+        margin-bottom: 12px;
+
+        @include c.mobile {
+            margin-bottom: 4px;
+
+        }
+    }
+
+    &__size-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 24px;
+        padding: 0;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 12px;
+
+        @include c.mobile {
+            margin-bottom: 4px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+    }
+
+    &__price {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+
+
+        @include c.mobile {
+            margin-bottom: 11px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+
+    &__vendor-code {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+
+
+        @include c.mobile {
+
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 400px;
+        font-size: 12px;
+        line-height: 15px;
+        color: c.$gray;
+
+
+        @include c.mobile {
+
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+}

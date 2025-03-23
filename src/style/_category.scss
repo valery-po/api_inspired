@@ -1,0 +1,87 @@
+@use 'var' as c;
+
+.category {
+display: flex;
+flex-wrap: wrap;
+padding: 24px 0 12px;
+justify-content: space-between;
+align-items: center;
+margin: 0 auto;
+max-width: 692px;
+gap: 10px;
+
+@include c.tablet {
+    padding: 16px 0 5px;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+@include c.mobile {
+  justify-content: flex-start;
+   gap: 10px 31px;
+   font-size: 10px;
+   line-height: 12px;
+   
+}
+
+
+    &__item {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+    
+      @include c.tablet {
+        
+        font-size: 12px;
+        line-height: 15px;
+      }
+    
+      @include c.mobile {
+      
+       
+       font-size: 10px;
+       line-height: 12px;
+       
+      }
+
+   
+    }
+
+    &__link {
+        position: relative;
+        transition: colot 0.3s ease-in-out;
+
+     
+        &:hover {
+            color: c.$gray;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 26px;
+            height: 2px;
+            background-color: c.$main-color;
+            transform: translateX(-50%);
+            opacity: 0;
+
+            @include c.tablet {
+                bottom: -4px;
+                width: 20px;
+                height: 1px;
+
+            }
+        }
+
+
+        &_active {
+            pointer-events: none;
+           &::after {
+            opacity: 1;
+           }
+        }
+    }
+}

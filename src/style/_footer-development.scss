@@ -1,0 +1,23 @@
+@use 'var' as c;
+
+.footer-development {
+  font-size: 12px;
+  line-height: 130%;
+  @include c.tablet {
+    font-size: 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  @include c.tablet {
+    gap: 11px;
+  }
+
+  @include c.mobile {
+    gap: 4px;
+  }
+}

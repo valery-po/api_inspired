@@ -1,0 +1,27 @@
+@use 'var' as c;
+
+.size {
+   &__check {
+        display: block;
+        padding: 3px 14px;
+        border: 0.5px solid c.$main-color;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+    }
+
+    &__input {
+      position: absolute;
+    }
+
+    &__input:checked + &__check {
+        background-color: c.$main-color;
+        color: c.$second-color;
+    }
+
+    &__input:invalid:required + &__check {
+      background-color: red;
+    }
+
+}

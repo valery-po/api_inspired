@@ -1,0 +1,18 @@
+@use 'var' as c;
+
+.navigation {
+    
+    padding-bottom: 60px;
+
+    @include c.laptop {
+        padding-bottom: 38px;
+    }
+
+    @include c.tablet {
+        padding-bottom: 31px;
+    }
+
+    @include c.mobile {
+        padding-bottom: 19px;
+    }
+}

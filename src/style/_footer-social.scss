@@ -1,0 +1,36 @@
+@use 'var' as c;
+
+.footer-social {
+    &__title {
+        margin-bottom: 16px;
+
+        @include c.mobile {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 20px;
+
+        @include c.tablet {
+            font-size: 12px;
+            line-height: 15px;
+            margin-bottom: 16px;
+        }
+    }
+    &__list {
+        display: flex;
+        gap: 10px;
+
+
+    }
+
+    &__link-fb:hover {
+        color: #3b5998;
+    }
+    &__link-vk:hover {
+        color: #0077ff;
+    }
+}

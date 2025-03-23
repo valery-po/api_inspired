@@ -1,0 +1,22 @@
+@use 'var' as c;
+      .main-button {
+ 
+        background-color: c.$main-color;
+        color: c.$second-color;
+        font-size: 700px;
+        font-size: 14px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        border: none;
+        padding: 14px 41px 15px;
+
+  
+        @include c.tablet {
+          padding: 12px 41px;
+          font-size: 10px;
+          line-height: 12px;
+          
+        }
+      }
+      
+     

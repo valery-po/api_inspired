@@ -1,0 +1,74 @@
+@use 'var' as c;
+
+.order {
+   
+
+    &__title {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 24px;
+        border-bottom: 1px solid c.$light-grey;
+
+        @include c.tablet {
+            font-size: 24px;
+            line-height: 29px;
+            padding-bottom: 15px;
+        }
+
+
+        @include c.mobile {
+            font-size: 18px;
+            line-height: 22px;
+            padding-bottom: 9px;
+        }
+    }
+
+    &__form {
+        padding-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+    }
+
+    &__personal {
+        
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 20px;
+    }
+
+    &__input {
+        width: 100%;
+        height: 46px;
+        padding: 0 24px;
+        font-size: 14px;
+        line-height: 17px;
+
+        &::placeholder {
+            color: c.$gray;
+        }
+    }
+
+    &__radio-list {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 10px;
+    }
+
+    &__radio {
+        font-size: 14px;
+        height: 24px;
+        line-height: 24px;
+    }
+
+    &__submit {
+        justify-self: end;
+        align-self: end;
+    }
+
+}
